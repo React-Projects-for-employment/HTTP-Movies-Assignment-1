@@ -32,6 +32,7 @@ function Movie({ addToSavedList, movieList, setMovieList }) {
       .delete(`http://localhost:5000/api/movies/${params.id}`)
       .then(res => console.log(res))
       .catch(err => console.log(err))
+
     setMovieList(movieList.filter(movie => Number(movie.id) !== Number(params.id)));
   }
 
